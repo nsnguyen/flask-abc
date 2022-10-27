@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DOTENV_KEY="dotenv://:key_ff6456d445b08c289eec891ba1944e3ae09b00b33387d046624214aff27173d5@dotenv.org/vault/.env.vault?environment=production"
+
